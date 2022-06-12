@@ -1,0 +1,548 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<!-- saved from url=(0083)http://vikku.info/programming/geodata/geonames-get-country-state-city-hierarchy.htm -->
+<html xmlns="http://www.w3.org/1999/xhtml" class="translated-ltr">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!--<base href="http://vikku.info/programming/">-->
+    <base href=".">
+
+    <meta http-equiv="content-language" content="pt-br">
+
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="./Obter hierarquia de cidades do estado do país - obtenha uma lista de países, estados e cidades usando o GeoNames_files/pstyle.css">
+    <iframe id="pxcelframe" src="./Obter hierarquia de cidades do estado do país - obtenha uma lista de países, estados e cidades usando o GeoNames_files/t_.html" style="display: none;"></iframe>
+    <script src="./Obter hierarquia de cidades do estado do país - obtenha uma lista de países, estados e cidades usando o GeoNames_files/all.js.transferir" async="" crossorigin="anonymous"></script>
+    <script type="text/javascript" id="async-buttons" src="./Obter hierarquia de cidades do estado do país - obtenha uma lista de países, estados e cidades usando o GeoNames_files/async-buttons.js.transferir"></script>
+    <script id="facebook-jssdk" src="./Obter hierarquia de cidades do estado do país - obtenha uma lista de países, estados e cidades usando o GeoNames_files/all.js(1).transferir"></script>
+    <script type="text/javascript" src="./Obter hierarquia de cidades do estado do país - obtenha uma lista de países, estados e cidades usando o GeoNames_files/shCore.js.transferir"></script>
+    <script type="text/javascript" src="./Obter hierarquia de cidades do estado do país - obtenha uma lista de países, estados e cidades usando o GeoNames_files/shBrushJScript.js.transferir"></script>
+    <script type="text/javascript" src="./Obter hierarquia de cidades do estado do país - obtenha uma lista de países, estados e cidades usando o GeoNames_files/shBrushPhp.js.transferir"></script>
+    <link type="text/css" rel="stylesheet" href="./Obter hierarquia de cidades do estado do país - obtenha uma lista de países, estados e cidades usando o GeoNames_files/shCoreDefault.css">
+    <script type="text/javascript">
+        SyntaxHighlighter.all();
+    </script>
+    <link rel="stylesheet" type="text/css" href="./Obter hierarquia de cidades do estado do país - obtenha uma lista de países, estados e cidades usando o GeoNames_files/buttons-secure.css">
+    <script type="text/javascript" src="./Obter hierarquia de cidades do estado do país - obtenha uma lista de países, estados e cidades usando o GeoNames_files/get_counts"></script>
+    <script type="text/javascript" src="./Obter hierarquia de cidades do estado do país - obtenha uma lista de países, estados e cidades usando o GeoNames_files/childrenJSON" id="YJscriptId1"></script>
+    <style type="text/css">
+        .fb_hidden {
+            position: absolute;
+            top: -10000px;
+            z-index: 10001
+        }
+        
+        .fb_reposition {
+            overflow: hidden;
+            position: relative
+        }
+        
+        .fb_invisible {
+            display: none
+        }
+        
+        .fb_reset {
+            background: none;
+            border: 0;
+            border-spacing: 0;
+            color: #000;
+            cursor: auto;
+            direction: ltr;
+            font-family: "lucida grande", tahoma, verdana, arial, sans-serif;
+            font-size: 11px;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: normal;
+            letter-spacing: normal;
+            line-height: 1;
+            margin: 0;
+            overflow: visible;
+            padding: 0;
+            text-align: left;
+            text-decoration: none;
+            text-indent: 0;
+            text-shadow: none;
+            text-transform: none;
+            visibility: visible;
+            white-space: normal;
+            word-spacing: normal
+        }
+        
+        .fb_reset>div {
+            overflow: hidden
+        }
+        
+        @keyframes fb_transform {
+            from {
+                opacity: 0;
+                transform: scale(.95)
+            }
+            to {
+                opacity: 1;
+                transform: scale(1)
+            }
+        }
+        
+        .fb_animate {
+            animation: fb_transform .3s forwards
+        }
+        
+        .fb_dialog {
+            background: rgba(82, 82, 82, .7);
+            position: absolute;
+            top: -10000px;
+            z-index: 10001
+        }
+        
+        .fb_dialog_advanced {
+            border-radius: 8px;
+            padding: 10px
+        }
+        
+        .fb_dialog_content {
+            background: #fff;
+            color: #373737
+        }
+        
+        .fb_dialog_close_icon {
+            background: url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;
+            cursor: pointer;
+            display: block;
+            height: 15px;
+            position: absolute;
+            right: 18px;
+            top: 17px;
+            width: 15px
+        }
+        
+        .fb_dialog_mobile .fb_dialog_close_icon {
+            left: 5px;
+            right: auto;
+            top: 5px
+        }
+        
+        .fb_dialog_padding {
+            background-color: transparent;
+            position: absolute;
+            width: 1px;
+            z-index: -1
+        }
+        
+        .fb_dialog_close_icon:hover {
+            background: url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent
+        }
+        
+        .fb_dialog_close_icon:active {
+            background: url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent
+        }
+        
+        .fb_dialog_iframe {
+            line-height: 0
+        }
+        
+        .fb_dialog_content .dialog_title {
+            background: #6d84b4;
+            border: 1px solid #365899;
+            color: #fff;
+            font-size: 14px;
+            font-weight: bold;
+            margin: 0
+        }
+        
+        .fb_dialog_content .dialog_title>span {
+            background: url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;
+            float: left;
+            padding: 5px 0 7px 26px
+        }
+        
+        body.fb_hidden {
+            height: 100%;
+            left: 0;
+            margin: 0;
+            overflow: visible;
+            position: absolute;
+            top: -10000px;
+            transform: none;
+            width: 100%
+        }
+        
+        .fb_dialog.fb_dialog_mobile.loading {
+            background: url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;
+            min-height: 100%;
+            min-width: 100%;
+            overflow: hidden;
+            position: absolute;
+            top: 0;
+            z-index: 10001
+        }
+        
+        .fb_dialog.fb_dialog_mobile.loading.centered {
+            background: none;
+            height: auto;
+            min-height: initial;
+            min-width: initial;
+            width: auto
+        }
+        
+        .fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner {
+            width: 100%
+        }
+        
+        .fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content {
+            background: none
+        }
+        
+        .loading.centered #fb_dialog_loader_close {
+            clear: both;
+            color: #fff;
+            display: block;
+            font-size: 18px;
+            padding-top: 20px
+        }
+        
+        #fb-root #fb_dialog_ipad_overlay {
+            background: rgba(0, 0, 0, .4);
+            bottom: 0;
+            left: 0;
+            min-height: 100%;
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 100%;
+            z-index: 10000
+        }
+        
+        #fb-root #fb_dialog_ipad_overlay.hidden {
+            display: none
+        }
+        
+        .fb_dialog.fb_dialog_mobile.loading iframe {
+            visibility: hidden
+        }
+        
+        .fb_dialog_mobile .fb_dialog_iframe {
+            position: sticky;
+            top: 0
+        }
+        
+        .fb_dialog_content .dialog_header {
+            background: linear-gradient(from(#738aba), to(#2c4987));
+            border-bottom: 1px solid;
+            border-color: #043b87;
+            box-shadow: white 0 1px 1px -1px inset;
+            color: #fff;
+            font: bold 14px Helvetica, sans-serif;
+            text-overflow: ellipsis;
+            text-shadow: rgba(0, 30, 84, .296875) 0 -1px 0;
+            vertical-align: middle;
+            white-space: nowrap
+        }
+        
+        .fb_dialog_content .dialog_header table {
+            height: 43px;
+            width: 100%
+        }
+        
+        .fb_dialog_content .dialog_header td.header_left {
+            font-size: 12px;
+            padding-left: 5px;
+            vertical-align: middle;
+            width: 60px
+        }
+        
+        .fb_dialog_content .dialog_header td.header_right {
+            font-size: 12px;
+            padding-right: 5px;
+            vertical-align: middle;
+            width: 60px
+        }
+        
+        .fb_dialog_content .touchable_button {
+            background: linear-gradient(from(#4267B2), to(#2a4887));
+            background-clip: padding-box;
+            border: 1px solid #29487d;
+            border-radius: 3px;
+            display: inline-block;
+            line-height: 18px;
+            margin-top: 3px;
+            max-width: 85px;
+            padding: 4px 12px;
+            position: relative
+        }
+        
+        .fb_dialog_content .dialog_header .touchable_button input {
+            background: none;
+            border: none;
+            color: #fff;
+            font: bold 12px Helvetica, sans-serif;
+            margin: 2px -12px;
+            padding: 2px 6px 3px 6px;
+            text-shadow: rgba(0, 30, 84, .296875) 0 -1px 0
+        }
+        
+        .fb_dialog_content .dialog_header .header_center {
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+            line-height: 18px;
+            text-align: center;
+            vertical-align: middle
+        }
+        
+        .fb_dialog_content .dialog_content {
+            background: url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;
+            border: 1px solid #4a4a4a;
+            border-bottom: 0;
+            border-top: 0;
+            height: 150px
+        }
+        
+        .fb_dialog_content .dialog_footer {
+            background: #f5f6f7;
+            border: 1px solid #4a4a4a;
+            border-top-color: #ccc;
+            height: 40px
+        }
+        
+        #fb_dialog_loader_close {
+            float: left
+        }
+        
+        .fb_dialog.fb_dialog_mobile .fb_dialog_close_button {
+            text-shadow: rgba(0, 30, 84, .296875) 0 -1px 0
+        }
+        
+        .fb_dialog.fb_dialog_mobile .fb_dialog_close_icon {
+            visibility: hidden
+        }
+        
+        #fb_dialog_loader_spinner {
+            animation: rotateSpinner 1.2s linear infinite;
+            background-color: transparent;
+            background-image: url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+            height: 24px;
+            width: 24px
+        }
+        
+        @keyframes rotateSpinner {
+            0% {
+                transform: rotate(0deg)
+            }
+            100% {
+                transform: rotate(360deg)
+            }
+        }
+        
+        .fb_iframe_widget {
+            display: inline-block;
+            position: relative
+        }
+        
+        .fb_iframe_widget span {
+            display: inline-block;
+            position: relative;
+            text-align: justify
+        }
+        
+        .fb_iframe_widget iframe {
+            position: absolute
+        }
+        
+        .fb_iframe_widget_fluid_desktop,
+        .fb_iframe_widget_fluid_desktop span,
+        .fb_iframe_widget_fluid_desktop iframe {
+            max-width: 100%
+        }
+        
+        .fb_iframe_widget_fluid_desktop iframe {
+            min-width: 220px;
+            position: relative
+        }
+        
+        .fb_iframe_widget_lift {
+            z-index: 1
+        }
+        
+        .fb_iframe_widget_fluid {
+            display: inline
+        }
+        
+        .fb_iframe_widget_fluid span {
+            width: 100%
+        }
+    </style>
+    <link type="text/css" rel="stylesheet" charset="UTF-8" href="./Obter hierarquia de cidades do estado do país - obtenha uma lista de países, estados e cidades usando o GeoNames_files/translateelement.css">
+</head>
+
+<body cz-shortcut-listen="true">
+
+    <div class="main">
+        <style type="text/css">
+            .contents {
+                background-color: #EDF4F8;
+                padding: 10px;
+                border: 2px dashed #C2DAE7;
+                width: 70%;
+                margin: 0 auto;
+            }
+            
+            .contents p span {
+                display: block;
+                float: left;
+                margin-left: 0px;
+                width: 110px;
+                color: gray;
+                font-weight: bold;
+            }
+            
+            .contents p select {
+                float: left;
+                margin-left: 90px;
+            }
+            
+            .contents p {
+                clear: both;
+                overflow: hidden;
+            }
+        </style>
+
+        <script type="text/javascript" src="./Obter hierarquia de cidades do estado do país - obtenha uma lista de países, estados e cidades usando o GeoNames_files/geodata-jsr-class.js.transferir"></script>
+
+
+
+
+
+
+
+        <div class="contents">
+
+            <p><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Continente:</font></font></span> <select name="continent" id="continent" onchange="getplaces(this.value,&#39;country&#39;);">
+						
+<option value=""><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Selecione</font></font></option><option value="6255146"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">África</font></font></option><option value="6255152"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Antártica</font></font></option><option value="6255147"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ásia</font></font></option><option value="6255148"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Europa</font></font></option><option value="6255149"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">América do Norte</font></font></option><option value="6255151"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Oceânia</font></font></option><option value="6255150"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">América do Sul</font></font></option></select>
+            </p>
+
+            <p><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">País:</font></font></span> <select name="country" id="country" onchange="getplaces(this.value,&#39;province&#39;);">
+<option value=""></option>						
+</select>
+            </p>
+
+            <p><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Estado:</font></font></span> <select name="province" id="province" onchange="getplaces(this.value,&#39;region&#39;)">
+<option value=""></option>
+</select>
+            </p>
+
+            <p><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Cidade / Região:</font></font></span> <select name="region" id="region" onchange="getplaces(this.value,&#39;city&#39;)">
+<option value=""></option>
+</select>
+            </p>
+
+            <p><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Cidade / Destrito:</font></font></span> <select name="city" id="city">
+<option value=""></option></select>
+            </p>
+        </div>
+
+
+        <script type="text/javascript">
+            var whos = null;
+
+            function getplaces(gid, src) {
+                whos = src
+
+                //	var  request = "http://ws.geonames.org/childrenJSON?geonameId="+gid+"&callback=getLocation&style=long";
+                var request = "http://www.geonames.org/childrenJSON?geonameId=" + gid + "&callback=listPlaces&style=long";
+                aObj = new JSONscriptRequest(request);
+                aObj.buildScriptTag();
+                aObj.addScriptTag();
+            }
+
+            function listPlaces(jData) {
+                counts = jData.geonames.length < jData.totalResultsCount ? jData.geonames.length : jData.totalResultsCount
+                who = document.getElementById(whos)
+                who.options.length = 0;
+
+                if (counts) who.options[who.options.length] = new Option('Select', '')
+                else who.options[who.options.length] = new Option('No Data Available', 'NULL')
+
+                for (var i = 0; i < counts; i++)
+                    who.options[who.options.length] = new Option(jData.geonames[i].name, jData.geonames[i].geonameId)
+
+                delete jData;
+                jData = null
+            }
+
+            window.onload = function() {
+                getplaces(6295630, 'continent');
+            }
+        </script>
+
+        <!--http://gis.stackexchange.com/questions/603/is-a-country-state-city-database-available-->
+
+
+
+    </div>
+    <!-- end div main -->
+
+    <script type="text/javascript">
+        var switchTo5x = true;
+    </script>
+    <script type="text/javascript" src="./Obter hierarquia de cidades do estado do país - obtenha uma lista de países, estados e cidades usando o GeoNames_files/buttons.js.transferir"></script>
+    <script type="text/javascript">
+        stLight.options({
+            publisher: "d5d04ed8-04d1-4c39-9336-46d4c4ce9d65",
+            doNotHash: false,
+            doNotCopy: false,
+            hashAddressBar: false
+        });
+    </script>
+
+    <!-- Google Analytics -->
+
+    <script type="text/javascript">
+        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script src="./Obter hierarquia de cidades do estado do país - obtenha uma lista de países, estados e cidades usando o GeoNames_files/ga.js.transferir" type="text/javascript"></script>
+    <div id="fb-root"></div>
+    <script type="text/javascript">
+        var pageTracker = _gat._getTracker("UA-5776689-2");
+        pageTracker._initData();
+        pageTracker._trackPageview();
+    </script>
+
+
+    <div id="stcpDiv" style="position: absolute; top: -1999px; left: -1988px;">
+        <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">ShareThis Copy and Paste</font>
+        </font>
+    </div><iframe src="./Obter hierarquia de cidades do estado do país - obtenha uma lista de países, estados e cidades usando o GeoNames_files/portal-v2.html" id="st_gdpr_iframe" title="Gerenciamento de consentimento do GDPR" style="width: 0px; height: 0px; position: absolute; left: -5000px;"></iframe>
+    <div id="stwrapper" class="stwrapper stwrapper5x" style="display: none;"><iframe allowtransparency="true" id="stLframe" class="stLframe" name="stLframe" frameborder="0" scrolling="no" src="./Obter hierarquia de cidades do estado do país - obtenha uma lista de países, estados e cidades usando o GeoNames_files/index.html"></iframe></div>
+    <div id="goog-gt-tt" class="skiptranslate" dir="ltr">
+        <div style="padding: 8px;">
+            <div>
+                <div class="logo"><img src="./Obter hierarquia de cidades do estado do país - obtenha uma lista de países, estados e cidades usando o GeoNames_files/translate_24dp.png" width="20" height="20" alt="Google Tradutor"></div>
+            </div>
+        </div>
+        <div class="top" style="padding: 8px; float: left; width: 100%;">
+            <h1 class="title gray">Texto original</h1>
+        </div>
+        <div class="middle" style="padding: 8px;">
+            <div class="original-text"></div>
+        </div>
+        <div class="bottom" style="padding: 8px;">
+            <div class="activity-links"><span class="activity-link">Sugerir uma tradução melhor</span><span class="activity-link"></span></div>
+            <div class="started-activity-container">
+                <hr style="color: #CCC; background-color: #CCC; height: 1px; border: none;">
+                <div class="activity-root"></div>
+            </div>
+        </div>
+        <div class="status-message" style="display: none;"></div>
+    </div>
+    <div id="stOverlay" onclick="javascript:stWidget.closeWidget();"></div>
+    <div class="goog-te-spinner-pos">
+        <div class="goog-te-spinner-animation"><svg xmlns="http://www.w3.org/2000/svg" class="goog-te-spinner" width="96px" height="96px" viewBox="0 0 66 66"><circle class="goog-te-spinner-path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle></svg></div>
+    </div>
+</body>
+
+</html>

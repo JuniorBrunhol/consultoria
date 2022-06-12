@@ -1,0 +1,453 @@
+
+/*  1.  Theme default CSS
+/*----------------------------------------*/
+@import url('https://rsms.me/inter/inter.css');
+html { font-family: 'Inter', sans-serif; }
+@supports (font-variation-settings: normal) {
+  html { font-family: 'Inter var', sans-serif; }
+}
+html,
+body {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+}
+
+body {
+    background: #f6f7fb;
+}
+
+@font-face {
+  font-family: 'notika-icon';
+  src: url('fonts/notika-icon.eot?qzfrsz');
+  src: url('fonts/notika-icon.eot?qzfrsz#iefix') format('embedded-opentype'), url('fonts/notika-icon.ttf?qzfrsz') format('truetype'), url('fonts/notika-icon.woff?qzfrsz') format('woff'), url('fonts/notika-icon.svg?qzfrsz#notika-icon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+.sale-statistic-inner,
+.statistic-right-area,
+.email-statis-inner,
+.recent-post-wrapper,
+.blog-inner-list,
+.realtime-wrap,
+.add-todo-list,
+.notika-chat-list,
+.recent-signup-inner,
+.ongoing-task-inner,
+.contact-inner,
+.contact-form,
+.widget-tabs-int,
+.visitor-sv-tm-int,
+.search-engine-int,
+.alert-inner,
+.color-wrap,
+.wizard-wrap-int,
+.dropdown-list,
+.modals-list,
+.accordion-wn-wp,
+.tooltips-inner,
+.popovers-list,
+.typography-list,
+.typography-heading,
+.typography-inline-pro,
+.tpgp-helper,
+.contact-list,
+.inbox-left-sd,
+.inbox-text-list,
+.view-mail-list,
+.normal-table-list,
+.data-table-list,
+.form-element-list,
+.range-slider-wrap,
+.datepicker-int,
+.colorpicker-int,
+.summernote-wrap,
+.dropdone-nk,
+.form-example-wrap,
+.invoice-wrap,
+.google-map-single,
+.data-map-single,
+.image-cropper-wp,
+.nk-cd-ed-wp,
+.bar-chart-wp,
+.line-chart-wp,
+.area-chart-wp,
+.flot-chart-wp,
+.wb-traffic-inner,
+.notika-icon-int {
+    padding: 20px;
+    background: #fff;
+}
+
+.panel-collapse .panel-heading:before {
+  content: "\e923";
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  font-family: 'notika-icon';
+}
+
+.panel-collapse .panel-heading:after {
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+  transform: scale(0);
+  content: "\e91b";
+  font-family: 'notika-icon';
+}
+
+.dataTables_filter label:after {
+  content: '\e928';
+  font-family: 'notika-icon';
+  position: absolute;
+  font-size: 14px;
+  right: 0px;
+  top: 8px;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button.next:before,
+.dataTables_wrapper .dataTables_paginate .paginate_button.previous:before {
+    font-family: 'notika-icon';
+    font-size: 14px;
+    line-height: 35px;
+}
+
+.bootstrap-select .bs-searchbox:before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 40px;
+  height: 100%;
+  content: "\e928";
+  font-family: 'notika-icon' !important;
+  font-size: 16px;
+  padding: 12px 0 0 15px;
+}
+
+.chosen-select-act .chosen-container .chosen-results li.result-selected:before {
+  content: "\e906";
+  font-family: 'notika-icon' !important;
+  font-size: 16px;
+}
+
+.chosen-select-act .chosen-container-single .chosen-search:before {
+  content: "\e928";
+  font-family: 'notika-icon' !important;
+  position: absolute;
+  left: 0;
+  top: 3px;
+  width: 40px;
+  height: 100%;
+  font-size: 16px;
+  padding: 5px 0 0 15px;
+}
+
+.notika-icon-pro a {
+  text-align: center;
+  background: #F6F8FA;
+  padding: 10px 15px;
+  border-radius: 3px;
+  margin: 5px 5px;
+}
+
+.notika-icon-pro i {
+  font-size: 25px;
+  color: #333;
+  position: relative;
+  top: 2px;
+}
+
+.floatleft {
+  float: left
+}
+
+.floatright {
+  float: right
+}
+
+.alignleft {
+  float: left;
+  margin-right: 15px;
+  margin-bottom: 15px
+}
+
+.alignright {
+  float: right;
+  margin-left: 15px;
+  margin-bottom: 15px
+}
+
+.aligncenter {
+  display: block;
+  margin: 0 auto 15px
+}
+
+a:focus {
+  outline: 0px solid
+}
+
+img {
+  max-width: 100%;
+  height: auto
+}
+
+.fix {
+  overflow: hidden
+}
+
+p {
+  margin: 0 0 15px;
+  color: #696a7b;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 10px;
+  font-weight: 700;
+ color: #323338;
+}
+
+a {
+  transition: all 0.3s ease 0s;
+  text-decoration: none;
+  color: #323338;
+}
+
+a:hover {
+  color: #323338;
+  text-decoration: none;
+}
+
+a:active,
+a:hover,
+a:focus {
+  outline: 0 none;
+  text-decoration: none;
+  color: #323338;
+}
+
+ul {
+  list-style: outside none none;
+  margin: 0;
+  padding: 0
+}
+
+.clear {
+  clear: both
+}
+
+body {}
+
+@font-face {
+  font-family: 'notika-icon';
+  src: url('fonts/notika-icon.eot?qzfrsz');
+  src: url('fonts/notika-icon.eot?qzfrsz#iefix') format('embedded-opentype'), url('fonts/notika-icon.ttf?qzfrsz') format('truetype'), url('fonts/notika-icon.woff?qzfrsz') format('woff'), url('fonts/notika-icon.svg?qzfrsz#notika-icon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.sale-statistic-inner,
+.statistic-right-area,
+.email-statis-inner,
+.recent-post-wrapper,
+.blog-inner-list,
+.realtime-wrap,
+.add-todo-list,
+.notika-chat-list,
+.recent-signup-inner,
+.ongoing-task-inner,
+.contact-inner,
+.contact-form,
+.widget-tabs-int,
+.visitor-sv-tm-int,
+.search-engine-int,
+.alert-inner,
+.color-wrap,
+.wizard-wrap-int,
+.dropdown-list,
+.modals-list,
+.accordion-wn-wp,
+.tooltips-inner,
+.popovers-list,
+.typography-list,
+.typography-heading,
+.typography-inline-pro,
+.tpgp-helper,
+.contact-list,
+.inbox-left-sd,
+.inbox-text-list,
+.view-mail-list,
+.normal-table-list,
+.data-table-list,
+.form-element-list,
+.range-slider-wrap,
+.datepicker-int,
+.colorpicker-int,
+.summernote-wrap,
+.dropdone-nk,
+.form-example-wrap,
+.invoice-wrap,
+.google-map-single,
+.data-map-single,
+.image-cropper-wp,
+.nk-cd-ed-wp,
+.bar-chart-wp,
+.line-chart-wp,
+.area-chart-wp,
+.flot-chart-wp,
+.wb-traffic-inner,
+.notika-icon-int {
+  padding: 20px;
+  background: #fff;;
+}
+
+.data-table-list {
+  border-radius: 20px !important;
+  display: flex;
+}
+.data-table-list2{
+  padding: 20px;
+  background: #fff;
+ height: 5000px;
+}
+.conct-sc-ic {
+  margin-left: auto;
+}
+
+.conct-sc-ic a {
+  display: right;
+  height: 20px;
+  width: 20px;
+  background: #Ffcb00;
+  border-radius: 50%;
+  color: #000000;
+  margin: 2px 5px;
+  font-size: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, .2);
+  padding: 0px;
+  text-align: center;
+  line-height: 21px;
+}
+
+.conct-sc-ic a:hover,
+.conct-sc-ic a:focus,
+.conct-sc-ic a:active {
+  color: #fff;
+}
+
+.conct-sc-ic2 {
+  margin-left: auto;
+  float:left;
+  margin-bottom: 20px;
+}
+
+.conct-sc-ic2 a {
+  display: block;
+  height: 40px;
+  width: 140px;
+  background: #Ffcb00;
+  border-radius: 30px;
+  color: #000000;
+  margin: 0px 10px 5px 0px;
+  font-size: 14px;
+  font-weight: bold;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, .2);
+  padding: 5px 10px;
+  text-align: center;
+  line-height: 30px;
+}
+
+.conct-sc-ic2 a:hover,
+.conct-sc-ic2 a:focus,
+.conct-sc-ic2 a:active {
+  color: #fff;
+}
+
+
+.social-sn h2 {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.social-sn p {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 0px;
+text-align: center;
+}
+
+.social-sn {
+  margin-right: 8px;
+  margin-left: 8px;
+}
+
+.social-st-list,
+.contact-win,
+.inbox-btn-st-ls,
+.view-mail-hd {
+  display: flex;
+}
+
+
+#imagem {
+  width: 200px;
+  height:80px !important;
+  text-align:center;
+  padding:0 10px;
+  display: block;
+}
+
+#imagem img{
+  width: 190px;
+  height:80px !important;
+  text-align:center;
+  
+}
+#botoes {
+  width:100%;
+  text-align:center;
+  padding: 2px 5px;
+  clear:both;
+  display:flex;
+  justify-content: space-evenly;
+}
+
+#aprovado {
+  background:#00d647;
+  border-radius: 50%;
+  padding:2px 5px;
+  margin: 5px;
+  display:flex;
+  flex-direction: row;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, .2);
+  width:25px;
+  height:25px;
+  margin-top:20px;
+  margin-bottom: -10px;
+  color:#fff;
+}
+
+#reprovado {
+  background:#ff3d57;
+  border-radius: 50%;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, .2);
+  padding:2px 5px;
+  color:#fff;
+  margin: 5px;
+  display:flex;
+  flex-direction: row;
+  width:25px;
+  height:25px;
+  margin-top:20px;
+  margin-bottom: -10px;
+}
+
+#texto{
+  display: flex;
+  margin-left:10px;
+  flex-direction: column;
+  justify-content: space-evenly; 
+  width:50%;
+}
